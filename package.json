@@ -1,0 +1,25 @@
+{
+  "name": "evotree-meta",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=example",
+    "build:lib": "npm run build --workspace=evotree",
+    "watch:lib": "npm run watch --workspace=evotree",
+    "build:example": "npm run build --workspace=example",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "semantic-release": "24.1.0",
+    "multi-semantic-release": "3.0.2"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}
